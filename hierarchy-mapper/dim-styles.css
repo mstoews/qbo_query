@@ -1,0 +1,409 @@
+/* dim-styles.css */
+/* Styles for multi-dimensional mapping UI */
+
+/* ===== Dimension badges on accounts ===== */
+
+.dim-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    line-height: 1.4;
+}
+
+.dim-badge-empty {
+    opacity: 0.35;
+    border: 1px dashed #94a3b8;
+    background: #f8fafc;
+    color: #94a3b8;
+}
+
+/* ===== Dimension Settings modal tabs ===== */
+
+.dim-settings-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.dim-tab {
+    padding: 8px 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+    background: #f8fafc;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: #64748b;
+}
+
+.dim-tab:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #334155;
+}
+
+.dim-tab.active {
+    font-weight: 600;
+    border-width: 2px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* ===== Enabled toggle ===== */
+
+.dim-enabled-row {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* ===== Values header row ===== */
+
+.dim-values-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 0;
+    margin-bottom: 2px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.dim-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.dim-toggle-label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* ===== Values list ===== */
+
+.dim-values-list {
+    max-height: 240px;
+    overflow-y: auto;
+    margin-bottom: 12px;
+}
+
+.dim-value-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.dim-value-num {
+    font-size: 12px;
+    color: #94a3b8;
+    min-width: 22px;
+    text-align: right;
+}
+
+.dim-value-name {
+    flex: 1;
+    padding: 5px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: inherit;
+}
+
+.dim-value-name:focus {
+    border-color: #4a90d9;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74,144,217,0.15);
+}
+
+.dim-value-code {
+    width: 80px;
+    padding: 5px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+
+.dim-value-code:focus {
+    border-color: #4a90d9;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74,144,217,0.15);
+}
+
+.dim-remove-btn {
+    background: none;
+    border: none;
+    color: #94a3b8;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 4px;
+    line-height: 1;
+}
+
+.dim-remove-btn:hover {
+    color: #d33;
+    background: #fef2f2;
+}
+
+/* ===== Add row ===== */
+
+.dim-add-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.dim-add-btn {
+    padding: 5px 14px;
+    background: #17375E;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dim-add-btn:hover {
+    background: #1e4d80;
+}
+
+/* ===== Empty message ===== */
+
+.dim-empty-msg {
+    padding: 16px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* ===== Stats row ===== */
+
+.dim-stats-row {
+    padding: 8px 0;
+    font-size: 12px;
+    color: #64748b;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 4px;
+}
+
+/* ===== Confirm box ===== */
+
+.dim-confirm-box {
+    padding: 16px;
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.dim-cancel-btn {
+    padding: 6px 14px;
+    background: #e2e8f0;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.dim-cancel-btn:hover {
+    background: #cbd5e1;
+}
+
+.dim-danger-btn {
+    padding: 6px 14px;
+    background: #d33;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.dim-danger-btn:hover {
+    background: #b91c1c;
+}
+
+/* ===== Gear icon button in toolbar ===== */
+
+.dim-gear-btn {
+    background: none;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dim-gear-btn:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.dim-gear-btn .gear-icon {
+    font-size: 16px;
+}
+
+/* ===== Dimension badges container in account rows ===== */
+
+.dim-badges {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+/* ===== Account Item Wrapper (for expand panel) ===== */
+
+.account-item-wrapper {
+    border-bottom: 1px solid #eee;
+}
+
+.account-item-wrapper .account-item {
+    border-bottom: none;
+}
+
+.mapped-account-wrapper .acct-props-panel {
+    margin-left: 0;
+    padding-left: 36px;
+}
+
+/* ===== Account Expand Arrow ===== */
+
+.acct-expand-arrow {
+    font-size: 9px;
+    color: #94a3b8;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    user-select: none;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.acct-expand-arrow:hover {
+    color: #475569;
+    background: #f1f5f9;
+}
+
+/* ===== Per-Account Properties Panel ===== */
+
+.acct-props-panel {
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    padding: 10px 12px 10px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.acct-props-empty {
+    font-size: 12px;
+    color: #94a3b8;
+    font-style: italic;
+}
+
+.acct-props-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.acct-props-label {
+    font-size: 11px;
+    font-weight: 600;
+    min-width: 90px;
+    padding-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.acct-props-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.acct-prop-chip {
+    display: inline-block;
+    padding: 3px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    background: white;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.12s;
+    line-height: 1.4;
+}
+
+.acct-prop-chip:hover {
+    border-color: #94a3b8;
+    background: #f1f5f9;
+}
+
+.acct-prop-chip.selected {
+    font-weight: 600;
+}
+
+.acct-props-dropdown {
+    padding: 4px 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: inherit;
+    background: white;
+    color: #334155;
+    min-width: 160px;
+    cursor: pointer;
+}
+
+.acct-props-dropdown:focus {
+    border-color: #4a90d9;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74,144,217,0.15);
+}
+
+.acct-props-no-values {
+    font-size: 12px;
+    color: #94a3b8;
+    font-style: italic;
+    padding: 4px 0;
+}
+
+/* ===== Adjust account-item for expand arrow ===== */
+
+.account-item .dim-badges {
+    margin-left: 0;
+    margin-right: 4px;
+}
+
+/* ===== Mapped account row badges ===== */
+
+.mapped-account-row .dim-badges {
+    margin-left: 0;
+    margin-right: 4px;
+}

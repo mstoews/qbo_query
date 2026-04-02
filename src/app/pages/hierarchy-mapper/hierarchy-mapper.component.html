@@ -1,0 +1,110 @@
+<header>
+    <div class="header-left">
+        <div class="org-name-container">
+            <span id="orgName" class="org-name">Organization Name</span>
+        </div>
+    </div>
+    <div class="header-buttons">
+        <div class="header-toolbar">
+            <button id="undoBtn" class="toolbar-btn toolbar-btn-disabled" onclick="app.undo()" title="Undo (Ctrl+Z)" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+            </button>
+            <button id="redoBtn" class="toolbar-btn toolbar-btn-disabled" onclick="app.redo()" title="Redo (Ctrl+Shift+Z)" disabled>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.13-9.36L23 10"/></svg>
+            </button>
+        </div>
+        <span class="version-label">v0.41</span>
+        <button class="dim-gear-btn" onclick="app.showDimensionSettingsModal()">
+            <span class="gear-icon">&#9881;</span> Dimensions
+        </button>
+        <button onclick="app.exportJSON()">Export JSON</button>
+        <button onclick="app.exportCSV()">Export CSV</button>
+        <button onclick="app.showImportTab()" class="toolbar-import-btn">Import</button>
+        <button onclick="app.clearAllData()" class="toolbar-clear-btn">Clear All Data</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="left-panel" id="accountPool">
+        <div class="panel-header">
+            <div class="panel-title">Unmapped Accounts</div>
+            <input type="text" id="accountSearch" class="search-input" placeholder="Search accounts...">
+            <div class="range-inputs">
+                <input type="text" id="rangeFrom" class="range-input" placeholder="From (e.g., 1000)">
+                <input type="text" id="rangeTo" class="range-input" placeholder="To (e.g., 1999)">
+                <button onclick="app.applyRangeFilter()">Filter</button>
+                <button onclick="app.clearFilters()" style="background:#999;">Clear</button>
+            </div>
+            <div class="filter-chips">
+                <label class="filter-chip active">
+                    <input type="checkbox" id="filterAll" checked onchange="app.toggleFilter('all')">
+                    All
+                </label>
+                <label class="filter-chip">
+                    <input type="checkbox" id="filterUnmapped" onchange="app.toggleFilter('unmapped')">
+                    Unmapped Only
+                </label>
+            </div>
+            <div class="bulk-actions">
+                <input type="checkbox" id="bulkSelectAll" onchange="app.toggleBulkSelect()">
+                <button id="bulkAssignBtn" onclick="app.openBulkAssignModal()" disabled>Assign Selected To...</button>
+            </div>
+        </div>
+        <div class="accounts-list" id="accountsList"></div>
+    </div>
+
+    <div class="middle-panel">
+        <div id="viewTabs" class="view-tabs"></div>
+
+        <div class="toolbar">
+            <label for="depthSelector">Tree Depth:</label>
+            <select id="depthSelector" class="depth-selector" onchange="app.changeDepth()">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6" selected>6</option>
+            </select>
+            <div class="toolbar-separator"></div>
+            <button class="toolbar-text-btn" onclick="app.expandAll()" title="Expand all nodes">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                Expand All
+            </button>
+            <button class="toolbar-text-btn" onclick="app.collapseAll()" title="Collapse all nodes">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>
+                Collapse All
+            </button>
+            <div id="depthLabels" style="flex: 1; color: #666; font-size: 12px;"></div>
+        </div>
+
+        <div id="levelLegend" class="level-legend"></div>
+
+        <div id="treeContainer" class="tree-container"></div>
+    </div>
+
+    <div class="right-panel">
+        <div class="preview-header">
+            <div class="panel-title">Statement Preview</div>
+        </div>
+        <div id="previewContainer" class="preview-container">
+            <div class="preview-placeholder">Map accounts to see a live preview of your financial statement here.</div>
+        </div>
+    </div>
+</div>
+
+<div id="bulkAssignModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">Assign Selected Accounts To...</div>
+        <div class="hierarchy-container" id="modalHierarchyContainer"></div>
+        <div class="modal-footer">
+            <button onclick="app.closeModal()" style="background-color: #999;">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="appModal" class="modal">
+    <div class="modal-content" style="max-width:450px;">
+        <div class="modal-header" id="appModalHeader">Title</div>
+        <div id="appModalBody" style="padding:16px;"></div>
+        <div class="modal-footer" id="appModalFooter"></div>
+    </div>
+</div>

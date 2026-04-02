@@ -81,9 +81,9 @@ export class Sidebar {
 
   menuSections: MenuSection[] = [
     {
-      title: 'Dashboards',
+      title: 'Hierarchy Mapper',
       items: [
-        { label: 'Dashboard', icon: 'pi pi-chart-bar', route: '/dashboard' },
+        { label: 'Hierarchy Mapper', icon: 'pi pi-sitemap', route: '/hierarchy-mapper' },
       ],
     },
     {

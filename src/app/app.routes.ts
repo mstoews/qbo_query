@@ -13,6 +13,7 @@ export const routes: Routes = [
     canActivate: [authGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'hierarchy-mapper', loadComponent: () => import('./pages/hierarchy-mapper/hierarchy-mapper.component').then(m => m.HierarchyMapperComponent) },
       { path: 'dashboard', loadComponent: () => import('./pages/dashboard_tab').then(m => m.Dashboard) },
       { path: 'journal-entries', loadComponent: () => import('./pages/journal-entries').then(m => m.JournalEntriesComponent) },
       { path: 'transactions', loadComponent: () => import('./pages/transactions').then(m => m.TransactionsComponent) },

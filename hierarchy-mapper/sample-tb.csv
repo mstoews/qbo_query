@@ -1,0 +1,41 @@
+Trial Balance,,,,,,
+Maple Ridge Condominium Corp. No. 245,,,,,,
+"As of December 31, 2025 and December 31, 2024",,,,,,
+,,,,,,
+Account Number,Account Name,Debit 2025,Credit 2025,Debit 2024,Credit 2024
+1000,Operating Bank Account,"42,200",,"35,400",
+1010,Reserve Fund Bank Account,"156,200",,"139,300",
+1020,Reserve Fund GIC,"240,000",,"225,000",
+1100,Condo Fees Receivable,"6,400",,"4,500",
+1110,Interest Receivable,"1,100",,900,
+1200,Prepaid Insurance,"9,100",,"8,400",
+2000,Accounts Payable,,"7,200",,"5,900"
+2010,Accrued Liabilities,,"3,400",,"2,600"
+2020,Condo Fees Received in Advance,,"11,200",,"10,700"
+3000,Operating Fund Balance,,"25,200",,"22,200"
+3010,Reserve Fund Balance,,"362,000",,"345,000"
+4000,Condo Fees - Operating,,"234,000",,"222,750"
+4010,Condo Fees - Reserve,,"78,000",,"74,250"
+4100,Parking Revenue,,"9,300",,"8,700"
+4110,Locker Rental Revenue,,"4,800",,"4,600"
+4200,Interest Income,,"11,100",,"9,350"
+4300,Status Certificate Fees,,"1,800",,"1,600"
+5000,Hydro / Electricity,"36,200",,"34,100",
+5010,Water & Sewer,"19,250",,"17,900",
+5020,Natural Gas,"22,600",,"21,050",
+5100,Building Repairs & Maintenance,"14,200",,"12,300",
+5110,Elevator Maintenance,"8,400",,"7,950",
+5120,Cleaning & Janitorial,"18,000",,"17,100",
+5130,Landscaping,"7,100",,"6,750",
+5140,Snow Removal,"9,250",,"8,400",
+5200,Property Insurance,"26,400",,"23,100",
+5210,Management Fees,"21,000",,"20,100",
+5220,Audit & Accounting,"4,250",,"4,100",
+5230,Legal Fees,"3,100",,"2,400",
+5300,Office & Printing,"1,200",,"1,100",
+5310,Bank Charges,900,,800,
+5400,Reserve Fund Contribution,"78,000",,"74,250",
+6000,Parking Garage Repairs,"14,200",,"7,500",
+6010,Elevator Modernization,0,,"35,000",
+6020,Lobby Renovation,"8,950",,250,
+TOTAL,,"748,000","748,000","707,650","707,650"
